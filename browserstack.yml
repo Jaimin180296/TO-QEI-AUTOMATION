@@ -16,9 +16,9 @@ accessKey:
 # Ensure you add a dynamic identifier, like an incremental build number from your
 # CI/CD or timestamp at the end of every build; otherwise tests from different
 # executions will be grouped together on BrowserStack
-buildName: browserstack-failed-build
+buildName: browserstack-pass-build
 # Use `projectName` to set the name of your project. Example, Marketing Website
-projectName: BrowserStack-failed-build
+projectName: BrowserStack-pass-build
 # Use `framework` to set the framework of your project. Example, testng, cucumber, cucumber-testng
 framework: testng
 
