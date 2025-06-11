@@ -3,7 +3,7 @@ name: QEI Flaky JOB
 on:
   workflow_dispatch:
   pull_request:
-    branches: ["master"]
+    branches: ["pass_case"]
   schedule:
     - cron: '30 6 * * 0'  # Every Sunday at 12:00 PM IST (06:30 UTC)
 
@@ -34,7 +34,7 @@ jobs:
           echo "BROWSERSTACK_BUILD=Build-QEI-FLAKY-JOB" >> $GITHUB_ENV
           echo "BROWSERSTACK_NAME=FALKY-JOB-TEST" >> $GITHUB_ENV
       - name: Build and Test with Maven
-        run: mvn clean test "-Dsurefire.suiteXmlFiles=config/sample-flaky-test.xml"
+        run: mvn clean test "-Dsurefire.suiteXmlFiles=config/sample-test.testng.xml"
 
       - name: Archive TestNG Results
         uses: actions/upload-artifact@v4
